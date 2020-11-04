@@ -3,7 +3,7 @@ public class ChemicalReaction {
 	
 	public static void main(String args[]) {
 		
-		int chemicals[] = {9,-3,8,-6,-7,8,10};
+		int chemicals[] = {-3,5,-6,9,8,-9};
 		int max1=0 , max2 = 0;
 		int min1= 0, min2 = 0;
 		for(int i = 0 ; i< chemicals.length ; i++) {
@@ -17,8 +17,8 @@ public class ChemicalReaction {
 			}
 			
 			else if(chemicals[i] < min1) {
-				min1 = chemicals[i];
 				min2 = min1;
+				min1 = chemicals[i];
 			}
 			else if(chemicals[i] < min2) {
 				min2 = chemicals[i];
