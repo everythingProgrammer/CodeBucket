@@ -1,7 +1,7 @@
 import java.util.*;
 public class Inputd {
 	
-			static void SieveOfEratosthenes(boolean prime[], int p_size)
+		static void SieveOfEratosthenes(boolean prime[], int p_size)
 		{
 			// false here indicates
 			// that it is not prime
@@ -28,30 +28,30 @@ public class Inputd {
 		//maximum contiguous subarray of prime numbers
 		static int maxPrimeSubarray(int arr[], int n)
 		{
-		int max_ele = Arrays.stream(arr).max().getAsInt();
-		boolean prime[] = new boolean[max_ele + 1];
-		Arrays.fill(prime, true);
+			int max_ele = Arrays.stream(arr).max().getAsInt();
+			boolean prime[] = new boolean[max_ele + 1];
+			Arrays.fill(prime, true);
 		
-		SieveOfEratosthenes(prime, max_ele);
+			SieveOfEratosthenes(prime, max_ele);
 		
-		int current_max = 0, max_so_far = 0;
+			int current_max = 0, max_so_far = 0;
 		
 		for (int i = 0; i < n; i++)
 		{
-		// check if element is non-prime
-		if (prime[arr[i]] == false)
-		current_max = 0;
-		
-		// If element is prime, than update
-		// current_max and max_so_far accordingly.
-		else
-		{
-		current_max++;
-		max_so_far = Math.max(current_max, max_so_far);
-		}
+			// check if element is non-prime
+			if (prime[arr[i]] == false)
+			current_max = 0;
+			
+			// If element is prime, than update
+			// current_max and max_so_far accordingly.
+			else
+			{
+				current_max++;
+				max_so_far = Math.max(current_max, max_so_far);
+			}
 		}
 		return max_so_far;
-		}
+	}
 			
 	
 	public static void main(String args[]) {
@@ -72,6 +72,9 @@ public class Inputd {
 		}
 		
 		for(int n : nums) {
+			if(n == 0)
+				System.out.println("-1");
+			else
 			System.out.println(n);
 		}
 		
