@@ -31,7 +31,7 @@ public class ExceptionHandling  {
 			throw new UFO("Something exception");
 		}
 		catch( UFO      e) {
-			System.out.println(""+e);
+			System.out.println("ufo exception"+e.getMessage());
 			System.out.println("Exception was caught");
 		}
 		System.out.println("Second Line");
